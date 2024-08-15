@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
- 
-<h2>Q1 How to find Maximum Number ?</h2>
-<p>7,8,2,42,7,9</p>
-<h5 id="demo"></h5>
 
-<br><br>
+    <h2>Q1 How to find Maximum Number ?</h2>
+    <p>7,8,2,42,7,9</p>
+    <h5 id="demo"></h5>
 
-<h2>Q2 How to print Number in descending order ?</h2>
-<p>1,7,8,10,25,48,3</p>
-<h5 id="demo1"></h5>
+    <br><br>
 
-<script>
-    // Q1 How to find Maximum Number
-    let myArray = [7,8,2,42,7,9]
-    let result = Math.max(...myArray)
-    document.getElementById('demo').innerHTML = result
+    <h2>Q2 How to print Number in descending order ?</h2>
+    <p>1,7,8,10,25,48,3</p>
+    <h5 id="demo1"></h5>
 
 
-    // How to print Number in descending order ?
-    let number = [1,7,8,10,25,48,3]
-    let newResult = number.sort(sortFun)
-    document.getElementById('demo1').innerHTML = newResult;
+    <h2>Q3 How to print 1 to 10 without loop?</h2>
+    <h5 id="demo2"></h5>
+
+    <script>
+        // Q1 How to find Maximum Number
+        let myArray = [7, 8, 2, 42, 7, 9]
+        let result = Math.max(...myArray)
+        document.getElementById('demo').innerHTML = result
 
 
-    function sortFun(a, b){
-        return a - b
-    }
+        // How to print Number in descending order ?
+        let number = [1, 7, 8, 10, 25, 48, 3]
+        let newResult = number.sort(sortFun)
+        document.getElementById('demo1').innerHTML = newResult;
+        function sortFun(a, b) {
+            return a - b
+        }
 
-</script>
+
+        // how to print number without loop
+        function countFun(start, end) {
+            console.log(start)
+            if (start < end) {
+                countFun(start + 1, end)
+            }
+            return start
+        }
+        countFun(1, 10)
+
+
+
+    </script>
 </body>
+
 </html>
